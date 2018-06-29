@@ -33,7 +33,7 @@ public class MemberFunctionWebTest {
     @Autowired
     private MockMvc mockMvc;
 
-    private JacksonTester<HealthFirstMember> json;
+    private JacksonTester<HealthFirstMemberRequest> json;
 
     @Before
     public void setup() {
@@ -42,9 +42,8 @@ public class MemberFunctionWebTest {
 
     @Test
     public void provideCoverageForGivenMemberId() throws Exception {
-        HealthFirstMember member = new HealthFirstMember();
-        member.setMemberId("123456789");
-        member.setCoverage(HealthFirstMember.Coverage.NONE);
+        HealthFirstMemberRequest member = new HealthFirstMemberRequest();
+        member.setMemberId("Madhu");
 
         MvcResult result = mockMvc.perform(post("/members")
         .contentType(MediaType.APPLICATION_JSON_UTF8)

@@ -14,10 +14,13 @@ public class MemberFunctionApplication {
 	}
 
 	@Bean
-	public Function<HealthFirstMember, HealthFirstMember> members() {
+	public Function<HealthFirstMemberRequest, HealthFirstMemberResponse> members() {
 		return member -> {
-		    member.setCoverage(HealthFirstMember.Coverage.MEDICAL);
-		    return member;
+			HealthFirstMemberResponse response = new HealthFirstMemberResponse();
+			response.setMemberId(member.getMemberId());
+			response.setCoverage(HealthFirstMemberResponse.Coverage.MEDICAL);
+		    return response;
         };
 	}
+
 }
