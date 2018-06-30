@@ -67,7 +67,9 @@ functions:
       FUNCTION_NAME: members
 ```
 ##Deployment
+
 ###Please run following command to deploy the project on AWS Lambda
+
 ```
 $sls deploy -v --aws-profle <your AWS profile name>
 ```
@@ -121,7 +123,9 @@ MembersLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:123456:function:sls-
 ServerlessDeploymentBucketName: sls-aws-spring-cloud-fun-serverlessdeploymentbuck-kar23wqdsy0
 
 ```
+
 ###Please run following command to invoke the function
+
 ```
 $ sls invoke -f members -l --aws-profile <your AWS profile name> --data '{"memberId":"1234567890"}'
 ```
@@ -154,7 +158,9 @@ REPORT RequestId: e811c8c5-7bfa-11e8-8c15-2db2cber4147  Duration: 7899.13 ms    
 
 
 ```
+
 ###Please run the following command to uninstall the project from AWS
+
 ```
 $ sls remove --aws-profile <your AWS profile name>
 ```
