@@ -170,5 +170,5 @@ Serverless: Stack removal finished...
 
 ```
 
-#Summary
+# Summary
 When using Java - Spring Cloud Function + Serverless Framework makes a great technology stack. It boots developer productivity by decoupling from Vendor specific FaaS API, and deployment activities.
