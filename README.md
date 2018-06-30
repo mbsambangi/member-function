@@ -1,7 +1,5 @@
 # Example Demonstrating Spring Cloud Function Framework + AWS Lambda + Serverless Framework
-
 This example uses Serverless Framework to deploy a Spring Cloud Function on AWS Lambda Platform.
-
 # Quick introduction to Spring Cloud Function
 Spring Cloud Function provides an uniform programming model to develop functions which can be run on any FaaS platforms like AWS Lambda.
 The same code can run as a web endpoint, a stream processor, or a task. Also, enables Spring Boot features.
@@ -11,7 +9,7 @@ More information is availabe at
 ## Use-case
 This is a scenario in which when we provide a Member ID from Health Insurance Card, the service should reply with the type of coverage that member has.
 In this fictional scenario it always returns a coverage type as MEDICAL for a given Member ID.
-##Function
+## Function
 {% highlight java %}
 
     @Bean
@@ -25,10 +23,8 @@ In this fictional scenario it always returns a coverage type as MEDICAL for a gi
 	}
 	
 {% endhighlight %}
-
-##AWS Lambda Handler
+## AWS Lambda Handler
 A Handler class which just implements SpringBootRequestHandler is needed. This is what we are going to configure in serverless.yml file.
-
 ## Maven POM file
 The following dependencies in POM.xml file does all the magic of generating AWS specific Lambda code.
 ```
@@ -66,10 +62,8 @@ functions:
     environment:
       FUNCTION_NAME: members
 ```
-##Deployment
-
-###Please run following command to deploy the project on AWS Lambda
-
+## Deployment
+### Please run following command to deploy the project on AWS Lambda
 ```
 $sls deploy -v --aws-profle <your AWS profile name>
 ```
@@ -123,9 +117,7 @@ MembersLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:123456:function:sls-
 ServerlessDeploymentBucketName: sls-aws-spring-cloud-fun-serverlessdeploymentbuck-kar23wqdsy0
 
 ```
-
-###Please run following command to invoke the function
-
+### Please run following command to invoke the function
 ```
 $ sls invoke -f members -l --aws-profile <your AWS profile name> --data '{"memberId":"1234567890"}'
 ```
@@ -156,15 +148,11 @@ START RequestId: e811c8c5-7bfa-11e8-8c15-2db2cb411047 Version: $LATEST
 END RequestId: e811c8c5-7bfa-11e8-8c15-2db2cber4147
 REPORT RequestId: e811c8c5-7bfa-11e8-8c15-2db2cber4147  Duration: 7899.13 ms    Billed Duration: 7900 ms        Memory Size: 1024 MB    Max Memory Used: 143 MB 
 
-
 ```
-
-###Please run the following command to uninstall the project from AWS
-
+### Please run the following command to uninstall the project from AWS
 ```
 $ sls remove --aws-profile <your AWS profile name>
 ```
-
 You would see console output something similar as
 ```
 Serverless: Getting all objects in S3 bucket...
@@ -173,8 +161,6 @@ Serverless: Removing Stack...
 Serverless: Checking Stack removal progress...
 ........
 Serverless: Stack removal finished...
-
 ```
-
 # Summary
 If Java is your choice of programming language - Spring Cloud Function + Serverless Framework makes a great technology stack. It boosts developer productivity by decoupling from Vendor specific FaaS API, and deployment activities.
