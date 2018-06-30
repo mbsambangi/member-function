@@ -1,10 +1,10 @@
 # Example Demonstrating Spring Cloud Function Framework + AWS Lambda + Serverless Framework
 
-This example uses Serverless Framework to deploy a Spring Cloud Function on AWS Lambda.
+This example uses Serverless Framework to deploy a Spring Cloud Function on AWS Lambda Platform.
 
 # Quick introduction to Spring Cloud Function
 Spring Cloud Function provides an uniform programming model to develop functions which can be run on any FaaS platforms like AWS Lambda.
-The same code can run a web endpoint, a stream processor, or a task. Also, enables Spring Boot features.
+The same code can run as a web endpoint, a stream processor, or a task. Also, enables Spring Boot features.
 More information is availabe at 
 [Spring Cloud Function](https://cloud.spring.io/spring-cloud-function/)
 # Example project
@@ -171,4 +171,4 @@ Serverless: Stack removal finished...
 ```
 
 # Summary
-When using Java - Spring Cloud Function + Serverless Framework makes a great technology stack. It boots developer productivity by decoupling from Vendor specific FaaS API, and deployment activities.
+If Java is your choice of programming language - Spring Cloud Function + Serverless Framework makes a great technology stack. It boosts developer productivity by decoupling from Vendor specific FaaS API, and deployment activities.
