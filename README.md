@@ -28,7 +28,7 @@ A Handler class which just implements SpringBootRequestHandler is needed. This i
 ## Maven POM file
 The following dependencies in POM.xml file does all the magic of generating AWS specific Lambda code.
 ```
-<dependency>
+<dependency> 
   <groupId>org.springframework.cloud</groupId>
   <artifactId>spring-cloud-function-adapter-aws</artifactId>
 </dependency>
